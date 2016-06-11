@@ -42,9 +42,7 @@ donde el coste con IVA sería de 2205€
 
 2. Como se puede ver creamos una aplicación simple que crea una matriz identidad en python y la muestra por pantalla. Para poder ejecutar dicha aplicación es necesario tener instalada la librería numpy para poder usar los *array numéricos* y poder trabajar con ellos. Esto queda reflejado en las siguientes imágenes:
 
-
 ![cde](img/cde.png#center)
-
 	
 
 
