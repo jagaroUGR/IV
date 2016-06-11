@@ -32,10 +32,22 @@ donde el coste con IVA sería de 2205€
 
 
 #Ejercicio 3
+
+
 1.	Virtualización plena o paravirtualización en caso de querer tener particiones de windows y Linux sobre la misma máquina. También podríamos crear entornos que sean laboratorios y hacer pruebas sobre el como si no fueran virtualizados, y en caso de haber problemas que no afecte al sistema central.
 
 	Otro tipo de virtualización sería virtualización a nivel de sistema operativo donde se podrían crear regiones aisladas de los sistemas operativos pero que no comprometan el sistema anfitrión.
 
 	Finalmente se podría usar la virtualización de entornos de desarrollo para ver como afectan los recursos a nuestros programas, siendo los recursos tipo hardware o tipo software, permitiendo conocer como se comportarán en distintos entornos
 
-2. 
+2. Como se puede ver creamos una aplicación simple que crea una matriz identidad en python y la muestra por pantalla. Para poder ejecutar dicha aplicación es necesario tener instalada la librería numpy para poder usar los *array numéricos* y poder trabajar con ellos. Esto queda reflejado en las siguientes imágenes:
+
+![cde1](img/cde1.png)
+
+![cde1](img/cde2.png)
+
+![cde1](img/cde3.png)
+
+	
+
+
