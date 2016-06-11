@@ -49,6 +49,21 @@ donde el coste con IVA sería de 2205€
 En este caso el procesador es un Intel 3570-k y como resultado de la orden vemos que dispone de la tecnología.
 
 ![ssh](img/ssh.png)
+
+
+#Ejercicio 5
+Comprobamos que el kernel contiene el módulo kvm
+
+![kvm](img/kvm.png)
+
+
+Ahora nos disponemos a instalar el hipervisor qemu que desde ubuntu se puede obtener del repositorio directamente.
+
+![qemu](img/qemu.png)
+
+
+
+
 	
 
 
