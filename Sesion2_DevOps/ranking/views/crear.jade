@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h3 Formulario de creación de empresa
+	form(method='post' action='/crear')
+		div.input
+			span.label Nombre
+			input(type='text',name='empresa')
+		div.input
+			span.label Calificacion
+			input(type='number',min="0",max='10',name='calificacion')
+		div.input
+			span.label Usuario
+			input(type='text',name='usuario')
+		div.actions
+			input(type='submit',value='Crear') 

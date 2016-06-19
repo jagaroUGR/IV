@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h3 Formulario de eliminacion de una empresa
+	form(method='post' action='/eliminar')
+		div.input
+			span.label Nombre
+			input(list='empresa',name='empresa')
+			datalist(id='empresa')
+				each item, i in empresas
+					option(value=item)
+		div.actions
+			input(type='submit',value='Eliminar') 

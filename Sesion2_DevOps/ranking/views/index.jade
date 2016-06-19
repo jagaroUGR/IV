@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Ranking de empresas del programa práctica de empresas
+  table(border='2')
+    thead
+      tr
+        th Empresa
+        th Calificación
+        th Usuario
+    tbody
+      each item, i in clasificacion
+        tr
+          td= item.nombre
+          td= item.valor
+          td= item.usuario

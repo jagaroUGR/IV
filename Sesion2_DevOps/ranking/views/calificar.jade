@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h3 Formulario de valoración de una empresa
+	form(method='post' action='/calificar')
+		div.input
+			span.label Nombre
+			input(list='empresa',name='empresa')
+			datalist(id='empresa')
+				each item, i in empresas
+					option(value=item)
+				
+		div.input
+			span.label Calificacion
+			input(type='number',min="0",max='10',name='calificacion')
+		div.input
+			span.label Usuario
+			input(type='text',name='usuario')
+		div.actions
+			input(type='submit',value='Calificar') 
