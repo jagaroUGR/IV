@@ -1,18 +1,14 @@
-/**
-*Libreria rankingempresa.js
-*Libreria para administrar las valoraciones de empresas por parte de usuarios
-*
-*
-**/
+//Libreria para administrar las valoraciones de empresas por parte de usuarios
+
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('mydb.db');
 
 
 
-/**
-*Devuelve la lista de (empresa,calificacion,valor)
-*@param{function}callback funcion para que sea asíncrona la ejecución.
-**/
+
+//Devuelve la lista de (empresa,calificacion,valor)
+//`callback` funcion para que sea asíncrona la ejecución.
+
 var mostrar = function(callback){
 	var clas=[];
 	db.each("SELECT * FROM empresa", function(err,row){
@@ -25,12 +21,10 @@ var mostrar = function(callback){
 }
 
 
-/**
-*Crea una empresa en la base de datos myslite3. El nombre de la tabla será empresa y se guarda en mydb.db
-*@param{String}nombre nombre de la empresa
-*@param{Integer}calificacion calificación de la empresa
-*@param{String}usuario persona que califica la empresa 
-*/
+//Crea una empresa en la base de datos myslite3. El nombre de la tabla será empresa y se guarda en mydb.db
+//`nombre` nombre de la empresa
+//`calificacion` calificación de la empresa
+//`usuario` persona que califica la empresa 
 var crear = function(nombre,calificacion,usuario){
 
 	db.run("CREATE TABLE if not exists empresa(nombre TEXT, valor INT, usuario TEXT)");
@@ -55,12 +49,10 @@ function nuevaCalificacion(usuario,empresa,callback){
 }
 
 
-/**
-*Calificar una empresa
-*@param{String}nombreEmpresa nombre de la empresa
-*@param{Integer}calificacion calificación de la empresa
-*@param{String}persona persona que califica la empresa 
-*/
+//Califica una empresa
+//`nombreEmpresa` nombre de la empresa
+//`calificacion` calificación de la empresa
+//`persona` persona que califica la empresa 
 var calificar = function(nombreEmpresa,calificacion,persona){
 	var emps=[];
 
@@ -83,10 +75,8 @@ var calificar = function(nombreEmpresa,calificacion,persona){
 
 }
 
-/**
-*Elimina una empresa del ranking
-*@param{String}nombreEmpresa Nombre de la empresa a eliminar
-**/
+//Elimina una empresa del ranking
+//`nombreEmpresa` Nombre de la empresa a eliminar
 var eliminar = function(nombreEmpresa){
 	var emps=[];
 	db.each("SELECT DISTINCT nombre FROM empresa", 
@@ -107,11 +97,8 @@ var eliminar = function(nombreEmpresa){
 }
 
 
-/**
-*Devuelve una lista (empresa,media) con orden de la media decreciente 
-*@param{function}callback Para hacer asíncrona la petición y permitir que se ejecute la función una vez obtenido el resultado de la base de datos.
-*
-**/
+//Devuelve una lista (empresa,media) con orden de la media decreciente 
+//`callback` Para hacer asíncrona la petición y permitir que se ejecute la función una vez obtenido el resultado de la base de datos.
 var ranking = function(callback){
 	var tabla=[];
 	db.each("select nombre,round(avg(valor),2) as av from empresa group by nombre order by av desc", function(err, row){
