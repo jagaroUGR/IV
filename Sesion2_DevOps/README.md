@@ -35,3 +35,36 @@ Este programa hace uso de **SQLite3** que se instala con **npm install**. Para q
 Para ello usamos la orden de instalar pero añadiendo el parámetro *save*
 
 ![](imgs/package1.png)
+
+###Creación automática de la documentación de nuestra aplicación
+
+Cuando deseamos tener la documentación de nuestra API en formato html podemos hacer uso de diferentes aplicaciones, que en nuestro caso será **docco** y **grunt-docco**.
+
+El formato que utiliza *docco* es muy simple, la doble barra (//). Para ello se usan como si fueran comentarios en nuestra API, y el programa lo reconoce.
+
+![](imgs/docco.png)
+
+![](imgs/docco2.png)
+
+
+###Desarrollo basado en pruebas 
+
+En este apartado se usa el módulo **assert** para asegurarnos que el resultado de una operación(o conjunto) es lo que esperábamos, y en caso de no serlo que se aborte la ejecución.
+
+![](imgs/assert.png);
+
+Comprobamos que falla y cambiamos la configuración.
+
+![](imgs/assert2.png);
+
+
+Para tener un entorno de pruebas a un nivel de abstracción superior podemos usar la librería **mocha**, que hace uso de las directivas a más bajo nivel *assert*. Para ello necesitamos instalar con *npm* la librería, añadiéndola a nuestro archivo *package.json*.
+
+La forma de usarla es *mocha direccion/hasta/el/archivo/test.js* donde test.js contiene nuestro banco de pruebas a realizar a la aplicación. Otra forma es añadiendo a package.json un apartado *scripts*.
+
+![](imgs/test.png)
+
+![](imgs/script.png)
+
+![](imgs/mocha.png)
+

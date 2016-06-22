@@ -9,6 +9,8 @@ var ranking = require('../lib/rankingempresa.js');
 //Funcion get de la página principal
 router.get('/', function(req, res, next) {
 
+  ranking.empresas();
+
   ranking.mostrar(function(clas){
   		res.render('index', { title: 'Ranking de empresas', clasificacion: clas });
 	}

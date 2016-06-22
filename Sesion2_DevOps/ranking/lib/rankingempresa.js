@@ -2,7 +2,7 @@
 
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('mydb.db');
-
+var assert = require('assert');
 
 
 
@@ -17,6 +17,7 @@ var mostrar = function(callback){
 
 	
 	callback(clas);
+	return clas;
 	});
 }
 
@@ -38,13 +39,16 @@ var crear = function(nombre,calificacion,usuario){
 
 function nuevaCalificacion(usuario,empresa,callback){
 	db.get("Select * from empresa where nombre=? and usuario=?", [empresa,usuario],function(err,row){
-		if(row==undefined){
+		/*if(row==undefined){
 			callback(null,null);
 		}else{
 			callback(null,row);
 
-		}});
-		
+		}});*/
+		//Debe de ser undefined para que no exista una entrada con un usuario repetido.
+		assert.equal(row,undefined,"Existe");
+		callback(null,null);
+	});
 
 }
 
@@ -53,7 +57,8 @@ function nuevaCalificacion(usuario,empresa,callback){
 //`nombreEmpresa` nombre de la empresa
 //`calificacion` calificación de la empresa
 //`persona` persona que califica la empresa 
-var calificar = function(nombreEmpresa,calificacion,persona){
+// `cb` función callback para que sea sincronizada la llamada y retorno
+var calificar = function(nombreEmpresa,calificacion,persona,cb){
 	var emps=[];
 
 		db.each("SELECT DISTINCT nombre FROM empresa", 
@@ -67,8 +72,10 @@ var calificar = function(nombreEmpresa,calificacion,persona){
 						var insertar = db.prepare("INSERT INTO empresa values(?,?,?)");
 						insertar.run(nombreEmpresa,calificacion,persona);
 					}
-			
+					var resultado =nombreEmpresa+" "+calificacion+ " " + persona;
+					cb(resultado);
 				});
+				
 			}
 		
 		});
@@ -110,6 +117,22 @@ var ranking = function(callback){
 
 }
 
+
+var empresas = function(){
+	var tabla=[];	
+	db.each("select distinct nombre from empresa",
+	function(err,rows){
+		tabla.push(rows);
+	},function(){
+		assert.notDeepEqual(tabla,[],"Vacía");
+		console.log(tabla);
+
+	});
+	
+ 
+}
+
+module.exports.empresas=empresas;
 module.exports.mostrar=mostrar;
 module.exports.crear=crear;
 module.exports.calificar=calificar;
