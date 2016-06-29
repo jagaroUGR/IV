@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+- "0.11"
+before_install:
+- npm install -g mocha
+- cd Sesion2_DevOps/ranking/lib; npm install .
+script: cd Sesion2_DevOps/ranking/; mocha
