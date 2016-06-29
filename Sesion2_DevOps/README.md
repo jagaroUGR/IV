@@ -68,3 +68,14 @@ La forma de usarla es *mocha direccion/hasta/el/archivo/test.js* donde test.js c
 
 ![](imgs/mocha.png)
 
+
+###Añadiendo integración continua
+
+Una forma de probar nuestro programa antes de que se use en producción es mediante **Travis**. Es una plataforma que se sincroniza con la cuenta github y permite añadir tus repositorios para que se ejecuten en máquinas virtuales que le pertenecen. Lo que debe de hacer es tener en el repositorio un archivo de configuarión **.travis.yml** y decir qué debe de hacer. Para ello indicamos el lenguaje de programación usado, la versión que necesita, los pasos para instalar la aplicación con todas las dependencias de librerías y aplicaciones, y finalmente la acción a realizar que serán los tests.
+
+![](imgs/travis2.png)
+
+Para la ejecución en este caso decimos que queremos que corra el test que se encuentra en /test de la aplicación. El resultado te lo muestra en la plataforma.
+
+![](imgs/travis.png)
+
