@@ -161,7 +161,7 @@ Primero se tienen que listar los contenedores que tenemos ejecutando, esto se ha
 
 Para hacerlo más correcto debemos de indicar después del identificador el nombre del repositorio y de la etiqueta con el formato nombre:etiqueta. Esto se muestra en la siguiente imagen, donde al hacer el commit mostramos las imágenes que forman parte de nuestro entorno Docker, y viendo que la primera entrada es la nueva imagen.
 
-!()[imgs/ejercicio9-2.png]
+![](imgs/ejercicio9-2.png)
 
 ##Ejercicio 10. Creación de una imagen imagen para la ejecución de una aplicación node.js
 
