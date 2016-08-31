@@ -39,14 +39,7 @@ y comprobamos el resultado
 
 ###Ejercicio 3.Escritura en YAML de estructura de datos en json
 
-lista:
-  -uno: "dos"
-  -tres:
-    -4
-    -5
-    -"Seis":
-      -siete: 8
-      -nueve: [10,11]
+![](imgs/ejercicio3.png)
 
 ###Ejercicio 4. Despliegue de aplicación ubicada en un servidor Git público en una máquina creada en Azure.
 
