@@ -1,0 +1,26 @@
+---
+- hosts: all 
+  sudo: yes
+
+  vars:
+    - homedir: /home/vagrant
+      appdir: reservaVuelo
+
+  tasks:
+    - name: install node.js and other dependencies for node app
+      apt: name={{ item }} state=latest
+      with_items:
+         - npm
+         - build-essential
+         - nodejs-legacy
+         - git
+
+
+
+    - name: Clonar el repositorio de Git
+      git: repo=git://github.com/jagaroUGR/reservaVuelo.git dest={{ homedir }}/{{ appdir}} clone=yes
+      register: git_finished
+
+    - name: npm install dependencies
+      npm: path={{ homedir}}/{{ appdir}}
+
