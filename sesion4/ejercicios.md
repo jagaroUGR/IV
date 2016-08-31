@@ -18,7 +18,7 @@ Muestra que tenemos creado un puente llamado **puente** y al que se le ha asigna
 
 1. Creamos el puente con **sudo brctl addbr <nombre>**.
 
-![](imgs/ejercicio2-1,png)
+![](imgs/ejercicio2-1.png)
 
 2. Asignamos una interfaz al nuevo puente **sudo brctl addif <nombrePuente> <nombreInterfaz**. Ahora la máquina se comunica con el puente que se comunica con la interfaz.
 
