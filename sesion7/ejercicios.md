@@ -37,7 +37,7 @@ Para crear la instancia usamos **sudo xl create archivo.cfg** y después por vnc
 
 En este apartado usamos el hipervisor XEN para crear nuestra mñaquina y nos conectamos a ella por medio de vncviewer.
 
-![](imgs/ejercicio4-1,png)
+![](imgs/ejercicio4-1.png)
 
 ![](imgs/ejercicio4-2.png)
 
@@ -59,11 +59,11 @@ donde nombredetuvm es el identificador único que será de tu máquina, nombre e
 
 3. Hacemos azure vm list que nos muestra nuestras máquinas así como el nombre de la dirección donde está nuestra vm.
 
-![](imgs/ejercicio5-1,png)
+![](imgs/ejercicio5-1.png)
 
 4. Usamos el user y nombre de la dirección del apartado anterior para acceder usando ssh.
 
-![](imgs/ejercicio5-2,png)
+![](imgs/ejercicio5-2.png)
 
 5. Instalamos,probamos,lo que queramos. Por ejemplo,
 
@@ -88,12 +88,12 @@ Usando los pasos que se indican en la web se logra llegar hasta este punto del c
 
 La herramienta permite crear VM para distintos hipervisores, entre los que están qemu, xen,lxc, creándote además el disco virtual, si lo quieres, así como elegir la configuración que desees.
 
-![](imgs/ejercicio7-1,png)
+![](imgs/ejercicio7-1.png)
 
 En este caso, se ha elegido instalar Linux Mint sobre una máquina virtual de tipo **qemu** especificando que queremos que cree el disco virtual y su tamaño de 15G. Además se le indica la memoria RAM y el nombre.
 
-![](imgs/ejercicio7-2,png)
+![](imgs/ejercicio7-2.png)
 
 muestra la máquina virtual emulada por **virt-install**. Donde elegimos la opción de instalar y cuando finaliza decimos que reinicie y ya tenemos una máquina que usa el hipervisor **qemu**.
 
-![](imgs/ejercicio7-3,png)
+![](imgs/ejercicio7-3.png)
