@@ -3,5 +3,5 @@ node_js:
 - "5.0"
 before_install:
 - npm install -g mocha
-- cd Sesion2_DevOps/ranking/; npm install .
-script: cd Sesion2_DevOps/ranking/test; mocha
+- cd sesion2/ranking/; npm install .
+script: cd sesion2/ranking/test; mocha
