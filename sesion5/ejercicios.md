@@ -7,12 +7,12 @@ hardware.
 
 ![](imgs/ejercicio1-1.png)
 
-![](imgs/ejercicio1-2,png)
+![](imgs/ejercicio1-2.png)
 
 Ahora podemos empezar a crear contenedores. Las *plantillas* que podemos usar se encuentran
 en */usr/share/lxc/templates*.
 
-![](imgs/ejerciico1-3.png)
+![](imgs/ejercicio1-3.png)
 
 ##Ejercicio2. Instalación de un contenedor.
 
