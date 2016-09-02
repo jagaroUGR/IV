@@ -185,4 +185,4 @@ Siguiendo el tutorial de [crear una imagen de docker para correr una aplicación
 
 Ahora ya podemos ver la app en el navegador
 
-![](imgs/ejercicio-10.png)
+![](imgs/ejercicio10-5.png)
